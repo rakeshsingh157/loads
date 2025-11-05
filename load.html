@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #1e1e2f, #252542, #3a3a68);
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 5px solid rgba(255,255,255,0.2);
+      border-top-color: #00e0ff;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+    p {
+      font-size: 0.95rem;
+      opacity: 0.75;
+      margin-top: 5px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      .loader {
+        width: 45px;
+        height: 45px;
+        border-width: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <h1>Redirecting please wait...</h1>
+  <p>Please wait a moment.</p>
+
+  <script>
+    
+    setTimeout(() => {
+      window.location.href = "https://rakeshsingh-portfolio.com"; // change this link
+    }, 0); // 1.8 seconds before redirect
+  </script>
+</body>
+</html>
